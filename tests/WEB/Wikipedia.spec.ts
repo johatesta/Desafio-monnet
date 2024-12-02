@@ -8,6 +8,16 @@ let webPage: WikipediaPage;
 const downloadpath = path.resolve(__dirname, "../downloads");
 const excelData = read_data("Datos-pruebas.xlsx");
 
+test.beforeAll(async ({}) => {
+    if (!fs.existsSync(downloadpath)) {
+      console.log("Folder has been created succesfully");
+  
+      fs.mkdirSync(downloadpath, { recursive: true });
+    } else {
+      console.log("Overwriting folder");
+    }
+  });
+  
 
 
 for (const data of excelData) {
