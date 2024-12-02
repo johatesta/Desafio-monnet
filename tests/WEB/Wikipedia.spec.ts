@@ -11,7 +11,7 @@ const excelData = read_data("Datos-pruebas.xlsx");
 
 
 for (const data of excelData) {
-  test(`Validate downloading for pokemon: ${data.name}`, async ({ page }) => {
+  test(`Validate downloading for pokemon: ${data.name} - @webpokemon`, async ({ page }) => {
     webPage = new WikipediaPage(page);
 
     await test.step("Navigate to Pokémon Wikipedia page", async () => {

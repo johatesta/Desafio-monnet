@@ -4,7 +4,7 @@ import { test } from "../fixtures/fixtures";
 test.describe("Validate POST and GET requests", () => {
   
   // Validación de la solicitud POST
-  test("Validate POST request", async ({ request, page }) => {
+  test("Validate POST request - @apiparte2post", async ({ request, page }) => {
     console.log("Starting POST request test");
 
     try {
@@ -35,7 +35,7 @@ test.describe("Validate POST and GET requests", () => {
 
 
   // Validación de la solicitud GET después del POST
-  test("Validate GET the response", async ({ request, page }) => {
+  test("Validate GET the response - @apiparte2post", async ({ request, page }) => {
     console.log("Starting GET request test");
 
     try {

@@ -7,7 +7,7 @@ test.describe("Testing in the API for the Pokemons", () => {
   const testData = read_data("Datos-pruebas.xlsx");
 
   for (const data of testData) {
-    test(`Validate Pokemon ID: ${data.id}, Nombre: ${data.name}`, async ({ request, page, context }) => {
+    test(`Validate Pokemon ID: ${data.id}, Nombre: ${data.name} - @apiparte1`, async ({ request, page, context }) => {
       const startTime = Date.now();
       const pokemon_name = data.name;
       const pokemon_id = data.id;
